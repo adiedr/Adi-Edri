@@ -1,0 +1,65 @@
+
+:root{
+    --myorange:#FAA83D;
+    --mylightblue:#D9EDEA;
+    --myaqua:#15CAB1;
+    --mydeepblue:#236363;
+    --mygrey:#C0C1B0;
+}
+@font-face {
+    font-family: txtfont;
+    src: url(VarelaRound-Regular.ttf);
+}
+*{ 
+    margin: 2px;
+    padding: 2px; 
+}
+body{
+    background-color: var(--mylightblue);
+}
+
+#container{
+    display: grid;
+    grid-template-areas: 
+    'header header header header header'
+    'menu menu menu menu menu'
+    'info info info info bar'
+    'footer footer footer footer footer';
+    }
+#header{
+    grid-area: header;
+    height: 20vh;
+    background-color: var(--myaqua);
+}
+img{
+max-width: 100%;
+max-height: 100%;
+margin-left: auto;
+margin-right: auto;
+display: block;
+}
+
+#right{
+    grid-area: bar;
+    background-color: var(--mygrey);
+    height: 100vh;
+}
+#menu{
+    grid-area: menu;
+    background-color: var(--myorange);
+    height: 5vh;
+}
+#info{
+    grid-area: info;
+    background-color: var(--mylightblue);
+    height: 100vh;
+}
+#footer{
+    grid-area: footer;
+
+}
+.toolbar{
+    display: inline-block;
+    font-family: txtfont;
+    text-align: right;
+}
