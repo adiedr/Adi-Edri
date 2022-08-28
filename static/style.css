@@ -16,6 +16,7 @@
 }
 body{
     background-color: var(--mylightblue);
+    font-family: txtfont;
 }
 
 #container{
@@ -23,7 +24,7 @@ body{
     grid-template-areas: 
     'header header header header header'
     'menu menu menu menu menu'
-    'info info info info bar'
+    'bar info info info info'
     'footer footer footer footer footer';
     }
 #header{
@@ -40,11 +41,10 @@ body{
 img{
 max-width: 30%;
 max-height: 30%;
-
 display: block;
 }
 
-#right{
+#left{
     grid-area: bar;
     background-color: var(--mygrey);
     height: 100vh;
@@ -53,28 +53,30 @@ display: block;
     grid-area: menu;
     background-color: var(--myorange);
     height: 5vh;
-
 }
 #info{
     grid-area: info;
     background-color: var(--mylightblue);
     height: 100vh;
+    text-align: right;
 }
 #footer{
     grid-area: footer;
 
 }
 nav{
-    margin-right: 20px;
+    margin-right: 150px;
+    text-align: center;
 }
 nav ul{
 margin: 0;
 padding: 0;
 list-style: none;
+display: inline-block;
 }
 nav li{
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 150px;
     float: right;
 }
 
@@ -99,4 +101,15 @@ nav a:hover{
             background-size: cover,contain;}
     100%{background-image: url(header/kite-surfing1.jpg);    background-repeat: no-repeat;
                 background-size: cover,contain;} 
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+h3{
+    font-size: 30px;
+    text-align: center;
+}
+form{
+    margin: 10px;
 }
