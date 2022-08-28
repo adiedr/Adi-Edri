@@ -28,14 +28,19 @@ body{
     }
 #header{
     grid-area: header;
-    height: 20vh;
-    background-color: var(--myaqua);
+    height: 70vh;
+    background-image:url(header/kite-surfing-4288247_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover,contain;
+    animation-name: header;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 img{
-max-width: 100%;
-max-height: 100%;
-margin-left: auto;
-margin-right: auto;
+max-width: 30%;
+max-height: 30%;
+
 display: block;
 }
 
@@ -48,6 +53,7 @@ display: block;
     grid-area: menu;
     background-color: var(--myorange);
     height: 5vh;
+
 }
 #info{
     grid-area: info;
@@ -58,8 +64,39 @@ display: block;
     grid-area: footer;
 
 }
-.toolbar{
+nav{
+    margin-right: 20px;
+}
+nav ul{
+margin: 0;
+padding: 0;
+list-style: none;
+}
+nav li{
     display: inline-block;
+    margin-left: 40px;
+    float: right;
+}
+
+nav a {
+    color:var(--mylightblue) ;
+    text-decoration: none;
+    text-transform: uppercase;
     font-family: txtfont;
-    text-align: right;
+}
+nav a:hover{
+    color: black;
+    text-decoration: underline;
+}
+@keyframes header{
+    0% {background-image: url(header/kite-surfing1.jpg);     background-repeat: no-repeat;
+        background-size: cover,contain;}
+    25% {background-image: url(header/kite-surfing.jpg);    background-repeat: no-repeat;
+        background-size: cover,contain;}
+    50%{background-image: url(header/kite-surfing-4288247_1920.jpg);    background-repeat: no-repeat;
+        background-size: cover,contain;}
+    75%{background-image: url(header/kite-surfing2.jpg);    background-repeat: no-repeat;
+            background-size: cover,contain;}
+    100%{background-image: url(header/kite-surfing1.jpg);    background-repeat: no-repeat;
+                background-size: cover,contain;} 
 }
