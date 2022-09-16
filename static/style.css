@@ -15,57 +15,79 @@
     padding: 2px; 
 }
 body{
-    background-color: var(--mylightblue);
     font-family: txtfont;
 }
 
 #container{
     display: grid;
     grid-template-areas: 
-    'header header header header header'
     'menu menu menu menu menu'
-    'bar info info info info'
+    'header header header header header'
+    'info info info info right'
     'footer footer footer footer footer';
     }
 #header{
     grid-area: header;
-    height: 70vh;
-    background-image:url(header/kite-surfing-4288247_1920.jpg);
+    height: 60vh;
+    background-image:url(header/image\ 1.png);
     background-repeat: no-repeat;
-    background-size: cover,contain;
     animation-name: header;
     animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    margin-right: 0%;
 }
-img{
-max-width: 30%;
-max-height: 30%;
-display: block;
+.logo{
+float: right;
+width: 28%;
+height: 28%;
+display: inline-block;
+max-height:20vh;
+margin-left: 90%;
+position: relative;
+filter: none;
+-webkit-filter: grayscale(0);
 }
 
-#left{
-    grid-area: bar;
-    background-color: var(--mygrey);
-    height: 100vh;
+.logo img{
+    float: right;
+    margin-left: 50px;
+    margin-right: 40px;
+
+}
+
+#right{
+    grid-area: right;
+    background-color: var(--mylightblue);
+    height: 150vh;
+    width: 20vw;
+    margin-top: 3vh;
+    margin-left: 30%;
 }
 #menu{
+    margin-top: 0%;
     grid-area: menu;
-    background-color: var(--myorange);
-    height: 5vh;
+    height: 15vh;
+    margin-bottom: 0%;
+    
 }
 #info{
     grid-area: info;
-    background-color: var(--mylightblue);
-    height: 100vh;
+    height: 150vh;
     text-align: right;
+    margin: 2em  0;
+    padding: 1em 2em;
+    display: list-item;
 }
 #footer{
     grid-area: footer;
-
+    display: inline;
+    float: left;
+    margin-bottom: 1vh;
 }
 nav{
-    margin-right: 150px;
+    margin-right: 15%;
     text-align: center;
 }
 nav ul{
@@ -73,34 +95,46 @@ margin: 0;
 padding: 0;
 list-style: none;
 display: inline-block;
+float: center;
 }
 nav li{
     display: inline-block;
-    margin-left: 150px;
+    margin-left: 0%;
+    margin-top: 2%;
     float: right;
 }
 
 nav a {
-    color:var(--mylightblue) ;
+    color:var(--mydeepblue) ;
     text-decoration: none;
     text-transform: uppercase;
     font-family: txtfont;
+    margin: 2em  0;
+    padding: 1em 2em;
+    font-size: 20px;
 }
 nav a:hover{
-    color: black;
+    color:var(--myorange);
     text-decoration: underline;
 }
+.logo:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
 @keyframes header{
-    0% {background-image: url(header/kite-surfing1.jpg);     background-repeat: no-repeat;
-        background-size: cover,contain;}
-    25% {background-image: url(header/kite-surfing.jpg);    background-repeat: no-repeat;
-        background-size: cover,contain;}
-    50%{background-image: url(header/kite-surfing-4288247_1920.jpg);    background-repeat: no-repeat;
-        background-size: cover,contain;}
-    75%{background-image: url(header/kite-surfing2.jpg);    background-repeat: no-repeat;
-            background-size: cover,contain;}
-    100%{background-image: url(header/kite-surfing1.jpg);    background-repeat: no-repeat;
-                background-size: cover,contain;} 
+    0% {background-image: url(header/image\ 1.png);     background-repeat: no-repeat;
+        background-size: cover;}
+    20% {background-image: url(header/image\ 2.png);    background-repeat: no-repeat;
+        background-size: cover;}
+    40%{background-image: url(header/image\ 3.png);    background-repeat: no-repeat;
+        background-size: cover;}
+    60%{background-image: url(header/image\ 4.png);    background-repeat: no-repeat;
+            background-size: cover;}
+    80%{background-image: url(header/image\ 5.png);    background-repeat: no-repeat;
+                background-size: cover;} 
+    100% {background-image: url(header/image\ 1.png);     background-repeat: no-repeat;
+                    background-size: cover;}           
 }
 h1{
     font-size: 50px;
@@ -111,5 +145,138 @@ h3{
     text-align: center;
 }
 form{
-    margin: 10px;
+    margin: 50px;
+    text-align: center;
+    padding: 10px;
 }
+img{
+    width: 20%;
+    margin-top: 3px;
+}
+input[class=registration]{
+    padding: 5px;
+    box-shadow: 0 0 5px 1px;
+    border-radius: 5px;
+}
+input[type=submit]{
+    margin-bottom: 20px;
+}
+
+select{
+    padding: 5px;
+    box-shadow: 0 0 10px 1px;
+    border-radius: 10px;
+}
+label{
+    display: block;
+    margin-top: 1em;
+}
+legend{
+    font-size: 3em;
+    padding: 0.25em;
+    color: black;
+}
+fieldset{
+    margin: 2em  0;
+    padding: 1em 2em;
+    border: solid 1px black;
+    border-radius: 6px;
+    min-width: 200px;
+    float: center;
+}
+.button {
+    background-color: var(--mydeepblue);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .button:hover {opacity: 1}
+  div p{
+    float: right;
+  }
+  .info h1 {
+    float: center;
+    font-size:26px; font-weight:700;  letter-spacing:1px; text-transform:uppercase; width:160px; text-align:center; margin:auto; white-space:nowrap; padding-bottom:13px;
+    margin-bottom: 50px;
+  }
+  .info h1:before {
+      background-color:var(--myaqua);
+      content: '';
+      display: block;
+      height: 3px;
+      width: 75px;
+      margin-bottom: 5px;
+  }
+  .info li{
+    background-color: var(--mylightblue);
+    margin: 1em  1em;
+    padding: 2em 2em;
+    border: solid 1px black;
+    border-radius: 6px;
+    width: 25%;
+    margin-top: 100px;
+  }
+  .info ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    }
+  .info h2 {
+    float: center;
+    text-align:center; 
+    margin:auto; 
+    white-space:nowrap;
+    padding-bottom:13px;
+    margin-top: 20px;
+    font-style: italic;
+  }
+  .info p {
+    float: center;
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  .Active{
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 1000px){
+    #container{
+        display: grid;
+        grid-template-areas: 
+        'menu'
+        'header'
+        'right'
+        'info'
+        'footer';
+        }
+    nav a{
+        font-size: medium;
+    }
+    #footer{
+        margin-bottom: 0;
+    }
+    #right{
+        height: 50px;
+    }
+    }
+    @media screen and (max-width: 700px){
+        nav a{
+            font-size: small;
+        } 
+    }
+    @media screen and (max-width: 600px){
+        nav a{
+            font-size: x-small;
+        } 
+    }
+    
