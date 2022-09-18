@@ -13,55 +13,49 @@
         <div id="header"> 
         </div>
         <div id="right"> 
-            <p>:עדכונים</p> 
-           </div>
+            <p>
+                :עדכונים
+            </p> 
+        </div>
         <div id="menu">
             <div class="logo">
                 <a href="Home.html">
                 <img src="../static/logo1.png" alt="logo" >
-                </div>
-        <nav>
-            <ul>
-                <li class="topnav"><a href="MySites.html">היעדים שלי</a></li>     
-                <li class="topnav"><a href="settings.html">הגדרות</a></li>
-                <li class="topnav"><a href="Home.html">התנתק</a></li>
-            </ul>
-        </nav>
-   
+            </div>
+            <nav>
+                <ul>
+                    <li class="topnav"><a href="MySites.html">היעדים שלי</a></li>     
+                    <li class="topnav"><a href="settings.html">הגדרות</a></li>
+                    <li class="topnav"><a href="Home.html" onclick="return confirm('?האם אתה בטוח שברצונך להתנתק')">התנתק</a></li>
+                </ul>
+            </nav>
         </div>
         <div id="info">
             <form action="" method="" id="form1">
                 <fieldset>
-                <legend>הגדרות</legend>
-                <label for="userName" >:שם משתמש</label>
-                <input form="form1" type="text" required id="userName" name="userName" class="registration">
-                <label for="password" >:סיסמה</label>
-                <input form="form1" type="password" required id="password" name="password" class="registration">
-                <label for="fullName" >:שם מלא</label>
-                <input form="form1" type="text" required id="fullName" name="fullName" class="registration">
-                <label for="email">:Email</label>
-                <input form="form1" type="email" required id="email" name="email" class="registration">
-                <label for="birthday">:תאריך לידה</label>
-                <input form="form1" type="date" required id="birthday" name="birthday" class="registration">
-                <label for="height">:גובה</label>
-                <input form="form1" type="number" required id="height" name="height" class="registration">
-                <label for="weight">:משקל</label>
-                <input form="form1" type="number" required id="weight" name="weight" class="registration">
-                <label for="kite"> :גודל קייט</label> </label>
-                <select name="kites" id="kites" multiple >
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                  </select><br>
-                <input form="form1" type="submit" value="שלח" class="button"><br>
+                    <legend>הגדרות</legend>
+                    <label for="userName" >:שם משתמש</label>
+                    <input form="form1" type="text" required id="userName" name="userName" class="registration">
+                    <label for="password" >:סיסמה</label>
+                    <input form="form1" type="password" required id="password" name="password" class="registration">
+                    <label for="fullName" >:שם מלא</label>
+                    <input form="form1" type="text" required id="fullName" name="fullName" class="registration">
+                    <label for="email">:Email</label>
+                    <input form="form1" type="email" required id="email" name="email" class="registration">
+                    <label for="birthday">:תאריך לידה</label>
+                    <input form="form1" type="date" required id="birthday" name="birthday" class="registration">
+                    <label for="height">:גובה</label>
+                    <input form="form1" type="number" required id="height" name="height" class="registration">
+                    <label for="weight">:משקל</label>
+                    <input form="form1" type="number" required id="weight" name="weight" class="registration"><br>
+                    <input form="form1" type="submit" value="שלח" class="button"><br>
                 </fieldset>
-                    </form>
+            </form>
         </div>
         <div id="footer">
-            <footer> Ⓒ Kite Zone</footer>
+            <footer>
+                Ⓒ Kite Zone
+            </footer>
         </div>
     </div>
 </body>

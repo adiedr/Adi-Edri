@@ -10,12 +10,32 @@
     font-family: txtfont;
     src: url(VarelaRound-Regular.ttf);
 }
+@keyframes header{
+    0% {background-image: url(header/img1.png);     background-repeat: no-repeat;
+        background-size: cover;}
+    20% {background-image: url(header/img2.png);    background-repeat: no-repeat;
+        background-size: cover;}
+    40%{background-image: url(header/img3.png);    background-repeat: no-repeat;
+        background-size: cover;}
+    60%{background-image: url(header/img4.png);    background-repeat: no-repeat;
+            background-size: cover;}
+    80%{background-image: url(header/img5.png);    background-repeat: no-repeat;
+                background-size: cover;} 
+    100% {background-image: url(header/img1.png);     background-repeat: no-repeat;
+                    background-size: cover;}           
+}
 *{ 
     margin: 2px;
     padding: 2px; 
+    box-sizing: border-box;
 }
 body{
     font-family: txtfont;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #container{
@@ -25,7 +45,9 @@ body{
     'header header header header header'
     'info info info info right'
     'footer footer footer footer footer';
-    }
+    position: relative;
+    
+}
 #header{
     grid-area: header;
     height: 60vh;
@@ -36,27 +58,9 @@ body{
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
-    margin-right: 0%;
+    left: 0;
+    right: 0;
 }
-.logo{
-float: right;
-width: 28%;
-height: 28%;
-display: inline-block;
-max-height:20vh;
-margin-left: 90%;
-position: relative;
-filter: none;
--webkit-filter: grayscale(0);
-}
-
-.logo img{
-    float: right;
-    margin-left: 50px;
-    margin-right: 40px;
-
-}
-
 #right{
     grid-area: right;
     background-color: var(--mylightblue);
@@ -64,6 +68,8 @@ filter: none;
     width: 20vw;
     margin-top: 3vh;
     margin-left: 30%;
+    position: absolute;
+    right: 10px;
 }
 #menu{
     margin-top: 0%;
@@ -84,8 +90,30 @@ filter: none;
     grid-area: footer;
     display: inline;
     float: left;
-    margin-bottom: 1vh;
+    position: fixed;
+    bottom: 0;
+    left: 5px;
 }
+.logo{
+float: right;
+width: 28%;
+height: 28%;
+display: inline-block;
+max-height:20vh;
+margin-left: 90%;
+position: relative;
+filter: none;
+-webkit-filter: grayscale(0);
+}
+
+.logo img{
+    float: right;
+    margin-left: 50px;
+    margin-right: 40px;
+
+}
+
+
 nav{
     margin-right: 15%;
     text-align: center;
@@ -122,20 +150,7 @@ nav a:hover{
     -webkit-filter: grayscale(100%);
 }
 
-@keyframes header{
-    0% {background-image: url(header/image\ 1.png);     background-repeat: no-repeat;
-        background-size: cover;}
-    20% {background-image: url(header/image\ 2.png);    background-repeat: no-repeat;
-        background-size: cover;}
-    40%{background-image: url(header/image\ 3.png);    background-repeat: no-repeat;
-        background-size: cover;}
-    60%{background-image: url(header/image\ 4.png);    background-repeat: no-repeat;
-            background-size: cover;}
-    80%{background-image: url(header/image\ 5.png);    background-repeat: no-repeat;
-                background-size: cover;} 
-    100% {background-image: url(header/image\ 1.png);     background-repeat: no-repeat;
-                    background-size: cover;}           
-}
+
 h1{
     font-size: 50px;
     text-align: center;
@@ -161,7 +176,6 @@ input[class=registration]{
 input[type=submit]{
     margin-bottom: 20px;
 }
-
 select{
     padding: 5px;
     box-shadow: 0 0 10px 1px;
@@ -181,8 +195,12 @@ fieldset{
     padding: 1em 2em;
     border: solid 1px black;
     border-radius: 6px;
-    min-width: 200px;
-    float: center;
+    min-width: 100px;
+    width: 60vw;
+    float: right;
+    position: absolute;
+    right: 50vh;
+    top: 70vh;
 }
 .button {
     background-color: var(--mydeepblue);
@@ -197,26 +215,25 @@ fieldset{
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-  }
-  
-  .button:hover {opacity: 1}
-  div p{
+}
+.button:hover {opacity: 1}
+div p{
     float: right;
-  }
-  .info h1 {
+}
+.info h1 {
     float: center;
     font-size:26px; font-weight:700;  letter-spacing:1px; text-transform:uppercase; width:160px; text-align:center; margin:auto; white-space:nowrap; padding-bottom:13px;
     margin-bottom: 50px;
-  }
-  .info h1:before {
-      background-color:var(--myaqua);
-      content: '';
-      display: block;
-      height: 3px;
-      width: 75px;
-      margin-bottom: 5px;
-  }
-  .info li{
+}
+.info h1:before {
+    background-color:var(--myaqua);
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.info li{
     background-color: var(--mylightblue);
     margin: 1em  1em;
     padding: 2em 2em;
@@ -224,14 +241,13 @@ fieldset{
     border-radius: 6px;
     width: 25%;
     margin-top: 100px;
-  }
-  .info ul{
+}
+.info ul{
     margin: 0;
     padding: 0;
     list-style: none;
-
-    }
-  .info h2 {
+}
+.info h2 {
     float: center;
     text-align:center; 
     margin:auto; 
@@ -239,17 +255,107 @@ fieldset{
     padding-bottom:13px;
     margin-top: 20px;
     font-style: italic;
-  }
-  .info p {
+}
+.info p {
     float: center;
     text-align: center;
     margin-top: 5em;
     margin-bottom: 5em;
-  }
-  .Active{
+}
+.Active{
     text-decoration: underline;
-  }
-  @media screen and (max-width: 1000px){
+} 
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.container {
+  display: flex;
+  width: 1040px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 10px;
+  background: linear-gradient(134deg, var(--myaqua) 0%, var(--mylightblue) 60%, var(--mygrey) 100%);
+  
+  border-radius: 10px;
+  box-shadow: 0 2px 20px black;
+  overflow: hidden;
+  width: 300px;
+  text-align: right;
+}
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 200px;
+  text-align: right;
+}
+.tag {
+  background: var(--myaqua);
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 0;
+  color: var(--mylightblue);
+  padding: 2px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tag-rec {
+  background-color: var(--myaqua);
+    float: right;
+    margin-right: 0%;
+}
+.tag-viewed {
+  background-color: var(--mygrey);
+}
+.tag-new {
+  background-color: var(--myorange);
+}
+.card-body p {
+  font-size: 13px;
+  margin: 0 0 40px;
+}
+.user {
+  display: flex;
+  margin-top: auto;
+}
+.user img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.user-info h5 {
+  margin: 0;
+}
+.user-info small {
+  color: var(--mygrey);
+}
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+#map {
+    height: 100%;
+    float: right;
+    width: 60vw;
+}
+  /* 
+   * Optional: Makes the sample page fill the window. 
+   */
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 1000px){
     #container{
         display: grid;
         grid-template-areas: 
@@ -258,7 +364,7 @@ fieldset{
         'right'
         'info'
         'footer';
-        }
+    }
     nav a{
         font-size: medium;
     }
@@ -267,16 +373,24 @@ fieldset{
     }
     #right{
         height: 50px;
+        width: 100%;
+    }
+    fieldset{
+        top: 80vh;
+        float: center;
+        left: 60px;
     }
     }
-    @media screen and (max-width: 700px){
-        nav a{
-            font-size: small;
-        } 
+@media screen and (max-width: 700px){
+    nav a{
+        font-size: small;
+    } 
+    footer{
+        font-size: small;
     }
-    @media screen and (max-width: 600px){
-        nav a{
-            font-size: x-small;
-        } 
-    }
-    
+}
+@media screen and (max-width: 600px){
+    nav a{
+        font-size: x-small;
+    } 
+}
